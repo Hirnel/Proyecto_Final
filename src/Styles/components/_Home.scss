@@ -1,0 +1,34 @@
+.home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.pokedex-container {
+  position: relative;
+  text-align: center;
+}
+
+.pokemon-logo {
+  max-width: 100%;
+  height: auto;
+}
+
+.search-bar-overlay {
+  position: absolute;
+  top: 20%;
+  right: 15%;
+  transform: translate(-50%, -50%);
+}
+
+.search-bar-input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #ef5350;
+  color: white;
+  font-size: 16px;
+  width: 250px;
+}

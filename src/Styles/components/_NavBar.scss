@@ -1,0 +1,15 @@
+nav {
+    background-color: #4CAF50; // Verde o el color que prefieras
+    padding: 10px 20px;
+  
+    a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+  
+      &:hover {
+        text-decoration: underline; // Resalta los enlaces al pasar el mouse
+      }
+    }
+  }
+  
