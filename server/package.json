@@ -1,0 +1,48 @@
+{
+  "name": "ejercicio_api_rest_entries_authors",
+  "version": "1.0.0",
+  "description": "Ejercicio para poner en practica consultas a base de datos relacional con API REST",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "clientinstall": "npm install --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "feed_db": "node seed/seeds.js",
+    "deploy": "concurrently \"npm run server\" \"npm run client\"",
+    "render-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hirnel/Proyecto_Final"
+  },
+  "author": "Cristian Garcia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hirnel/Proyecto_Final"
+  },
+  "homepage": "https://github.com/Hirnel/Proyecto_Final",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-stare": "^2.5.1",
+    "supertest": "^6.3.3",
+    "concurrently": "^7.3.0",
+    "nodemon": "^2.0.19"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "node-fetch": "^3.3.2",
+    "nodemon": "^3.0.1",
+    "pg": "^8.11.3",
+    "bcryptjs": "^2.4.3",
+    "config": "^3.3.7",
+    "express-validator": "^6.14.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.5.4",
+    "node-statsd": "^0.1.1",
+    "response-time": "^2.3.2"
+  }
+}
