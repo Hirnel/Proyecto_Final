@@ -1,13 +1,14 @@
 const express = require('express')
 const app = express() //inicializar el servidor 
 const port = 3000 //puerto para usar por el servidor
+const sequelize = require('./config/database');
 //const productsRoutes = require("./routes/products.routes")
 
 app.use(express.json());
 
 
 const entriesRoutes = require("./routes/entries.routes");
-app.use('/api/entries', entriesRoutes);
+app.use('/api/entries', entriesRoutes);
 
 const authorsRoutes = require("./routes/authors.routes")
 
@@ -23,6 +24,10 @@ app.use("*", (req, res) => {
 app.listen(port, () => {
     console.log(`Example app listening on http://localhost:${port}`);
 });
+
+sequelize.sync({ force: false })
+    .then(() => console.log('Base de datos sincronizada'))
+    .catch((error) => console.error('Error al sincronizar la base de datos:', error));
 
 /*
 SELECT * FROM entries;
